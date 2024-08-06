@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <h1>Inventory Management System</h1>
+      
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                             <form #myForm="ngForm">
+                              <div class="form-group">
+                               
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="itemName" 
+                                       #empName="ngModel" ngModel
+                                        />  <label for="Item Name" class="align">
+                                            &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;   Item Name
+                                         </label>
+                            </div>
+                              <div class="form-group">
+                                   
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="itemId" 
+                                           #empId="ngModel" ngModel
+                                           required
+                                           pattern="[0-9]+"
+                                            /> <label for="Item Id" class="align">
+                                                &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;   Item Id
+                                            </label>
+                                </div>
+                                
+                               
+                                <div class="form-group">
+                                    
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="itemQuantity" 
+                                           #empSalary="ngModel" ngModel
+                                           /><label for="Item Quantity" class="align">
+                                            &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;   Item Quantity
+                                        </label>
+                                </div>
+                                <div class="form-group">
+                                 
+                                  <input type="text" 
+                                         class="form-control" 
+                                         name="itemPrice" 
+                                         #empSalary="ngModel" ngModel
+                                         /> <label for="ItemPrice" class="align">
+                                            &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  Item Price
+                                        </label>
+                              </div>
+                                 <div id = "but">                             
+                                <button class="btn btn-success" (click)="insertItem(myForm.value)">
+                                    Insert 
+                                </button>
+                            &nbsp;&nbsp;
+                                <button class="btn btn-primary" (click)="updateItem(myForm.value)" >
+                                    Update 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-danger" (click)="deleteItem(myForm.value)">
+                                    Delete 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-warning" (click)="findItem(myForm.value)" >
+                                    Find 
+                                </button>
+                                &nbsp;&nbsp;
+                                <button class="btn btn-info" (click)="findAllItem()">
+                                    Find All
+                                </button>
+                                </div>
+                           
+                            </form>
+                       
+                        </div>
+                    </div>
+                </div>
+            
+         <br><br><BR><br>
+    <h3>{{result}}</h3>
+    <div style="width: 100%;" *ngIf="flag">
+        <table width="80%" align="center" class="table table-borderd"><br><br><br>
+         <tr><th>Employee Name</th><th>Employee Id</th><th>Employee Quantity</th><th>Employee Price</th></tr> 
+          <tr *ngFor="let item of itemArr">
+              <td> {{item.itemName}} </td><td> {{item.id}} </td><td> {{item.itemQuantity}} </td><td> {{item.itemPrice}} </td>
+          </tr>
+       </table>
+       </div>      
+ </body>
+</html>
+

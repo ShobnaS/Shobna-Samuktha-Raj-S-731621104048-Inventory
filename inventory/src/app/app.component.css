@@ -1,0 +1,36 @@
+label{
+    font-weight: bold;
+    color:goldenrod;
+}
+h1{
+    text-align: center;
+    color:cornflowerblue;
+    position: relative;
+    top : 50px;
+   
+}
+.form-control{
+    width: 500px;
+    position: relative;
+    left: 170px;
+    top:50px;
+}
+#but{
+    position: relative;
+    bottom: -90px;
+    left : 200px;
+}
+.align{
+    position: relative;
+    top : 15px;
+}
+.container{
+    background-color:azure;
+    height: 500px;
+    width: 900px;
+    position: relative;
+    top : 60px;
+}
+body{
+    background-color:ghostwhite;
+}

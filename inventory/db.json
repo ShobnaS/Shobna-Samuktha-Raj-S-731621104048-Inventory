@@ -1,0 +1,34 @@
+{
+  "employees": [
+    {
+      "itemName": "AC",
+      "id": "6400",
+      "itemQuantity": "10",
+      "itemPrice": "40000"
+    },
+    {
+      "id": "9400",
+      "itemName": "Washing Machine",
+      "itemQuantity": "10",
+      "itemPrice": "10000"
+    },
+    {
+      "id": " 500",
+      "itemName": "Laptop",
+      "itemQuantity": "70",
+      "itemPrice": "100000"
+    },
+    {
+      "id": "100",
+      "itemName": "Fan",
+      "itemQuantity": "60",
+      "itemPrice": "4000"
+    },
+    {
+      "itemName": "MICRO OVEN",
+      "id": "201",
+      "itemQuantity": "6",
+      "itemPrice": "50000"
+    }
+  ]
+}
